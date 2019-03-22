@@ -471,7 +471,7 @@ Good performance: Upper bound = over 15%</p>
 <li>In style select look and orientation as before. </li>
 <li>In presentation clear autowidth segments, for Max type 0.5</li>
 <li>For segment 1 click the colour tile and under base colour select calculated, edit an expression type =if(Sum(Margin)/Sum(LineSalesAmount)&gt;=0.15, Green(), LightRed()) Click ok.</li>
-<li>For segment 2 under lower bound, click the ellipsis and edit an expression, click the colour tile under base colour choose fixed and select a light grey colour.</li>
+<li>For segment 2 under lower bound, click the ellipsis and edit an expression, type: =sum(margin)/sum(lineSalesAmount), click the colour tile under base colour choose fixed and select a light grey colour.</li>
 <li>Under indicator, Mode select No Indicator.</li>
 <li>Clear show scale, clear show labels on every, select hide segment boundaries, select hide gauge outlines.</li>
 <li>Under Text in chart, select add, under text type =Num(Sum(Margin)/Sum(LineSalesAmount),&#39;##.##%&#39;).</li>
