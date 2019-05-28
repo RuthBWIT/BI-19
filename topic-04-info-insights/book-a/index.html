@@ -311,126 +311,79 @@ Note that the string is evaluated if there is a one-to-one relationship between 
           </div>
         
           <div class="ui tab segment lab" data-tab="03">
-            <h1>Create a new application</h1>
-<p>Close the movies application by selecting File, close.</p>
-<p>Next choose New from the File menu, close wizard, then choose save from the file menu. Name your application ABC_Sales and click Save.</p>
-<p>There are some document properties that are useful to set before starting, they mean that layout remains consistent throughout the application.</p>
-<p>First save the following image to the same folder you have saved your application.</p>
-<p><a href="./img/background_with_header_navigation.png">background image</a></p>
+            <h1>Data Filtering</h1>
+<p>We will continue with the same data, Olympic medal winners to apply filters on this file.
+-    Put cursor on spreadsheet
+-    Click Data ribbon and choose filter icon.</p>
+<p><img src="./img/07.png" alt=""></p>
 <ul>
-<li>Open the Settings menu, and then Document Properties. </li>
-<li>In the General tab for Title, type ABC Sales App. </li>
-<li>Under Author, type your name or initials. Under </li>
-<li>Under Default Sheet Background, select Wallpaper Image.</li>
-<li>Click the change button. The select Image dialog opens.</li>
-<li>Navigate to the background image you already saved.</li>
-<li>Select Image Formatting: No stretch, Horizontal: Left, and Vertical, Top;</li>
-<li>Under Styling Mode, select Simplified</li>
-<li>Under Sheet Object Style, select Transparent</li>
-<li>Under Tabrow Style, select Straight.</li>
-<li>On the Font tab select Arial, Font Style Regular, and Size 10</li>
-<li>On the Layout tab, under Shadow Intensity, select No Shadow, and Border Width 1 pt</li>
-<li>On the Caption tab, click Font, select Arial, Font Style Bold, and Size 10.</li>
-<li>Click Ok twice.</li>
+<li>Drop down boxes have been placed in the columns.</li>
+<li>For example, if you click on drop down box for the column Year, it contains all possible values of years that occur in that column.</li>
+<li>Similarly, if you click on the drop down box against City, all the possible cities that occur in that column. If you click on sport, all possible sports that occur in that column and so on.</li>
+<li>How do I use the filters – if you want to see the medals won by Japan. Go to country column, click the drop down box, Click on the Select All cell there, it deselects all the countries.  Now select Japan.</li>
+<li>Notice the small icon at filter box, so you can see filter has been applied.</li>
 </ul>
-<h2>The Data Model</h2>
-<p>QlikView works with many different types of data sources (SQL Server, Sybase, Access, Oracle, SalesForce, Excel, .txt, .csv, and html files)</p>
-<p>A QlikView application with the .qvw file extension is a file containing everything needed to analyse the data:</p>
+<p><img src="./img/08.png" alt=""></p>
+<h2>TASK 1:</h2>
 <ul>
-<li>The data itself</li>
-<li>The script needed to update the QlikView file with new data from the data source</li>
-<li>Layout information, including all the sheets, list boxes, charts and so on</li>
-<li>Document alerts, document bookmarks and document reports</li>
+<li>Continuing here, now filter on Sydney Olympics… what do you select?</li>
+<li>Year – 2000</li>
+<li>Further filter you can look at gold medals… how many??</li>
 </ul>
-<p>A .qvd file contains a table of data exported from QlikView. It can only be read and written to using QlikView. It is optimised for speed when reading data but is also very copact. Reading data from a qvd file is typically 10 to 100 times faster than reading from other data sources.</p>
-<p>To retrieve data for a QlikView application, you write and execute a load script. This script specifies the data source, the tables, and the fields to be loaded. When executing the script, the loaded data is kept in an internal data model, which is saved with the QlikView application. This data set is then evaluated each time a value is selected in the applications layout.</p>
-<h2>Data files for your ABC apparel application</h2>
-<p><a href="./archives/abc_sales.zip">abcSales</a></p>
-<p>The facts table contains the primary data source for the QlikView application. It contains order data.</p>
-<p>The customers table contains information about the customers.</p>
-<p>The products table contains information about the products and product categories.</p>
-<p>The sales spreadsheet contains employee information for the application and is maintained by the company&#39;s HR department.</p>
-<p>The calendar text file contains the script for the calendar and has to be included in the load script.</p>
-<p>Save all of these files into the directory that stores your ABC_Sales application. </p>
-<h2>Data Structure</h2>
-<p>Each field from a data source loaded into QlikView becomes a field in the QlikView associative data structure. Fields that display in more than one table and have identical names are associated and identified as Key fields.</p>
-<h2>Load Data</h2>
+<h2>Result</h2>
+<p><img src="./img/09.png" alt=""></p>
 <ul>
-<li>Ensure your ABC_Sales application is still open. </li>
-<li>From the file menu, select Edit Script (Ctrl+E). The Edit Script dialog displays.</li>
-<li>Place the cursor in the script area on an empty row below the last script statement.</li>
-<li>On the Data tab, under Data from Files, select Relative Paths.</li>
-<li>Click the Table Files button. The Open Local Files dialog displays.
-<img src="./img/12.png" alt=""></li>
-<li>Under Open Local Files, locate the Facts.qvd file and click Open.</li>
-<li>The File Wizard: Type dialog displays.</li>
-<li>Click Finish. 
-<img src="./img/13.png" alt=""></li>
-<li>Above the LOAD statement, remove the word Directory; and type Facts;
-<img src="./img/14.png" alt=""></li>
-<li>Click the Reload button to execute the script and load the data.</li>
-<li>The Sheet Properties dialog displays a list of the fields imported from the qvd.
-<img src="./img/15.png" alt=""></li>
-<li>Click OK to close the dialog.</li>
+<li><ul>
+<li>What about the women who won gold medals for Japan? How many?</li>
 </ul>
-<h2>Exercise</h2>
-<p>Now load the Customers.qvd and the Products.qvd files.</p>
+</li>
+<li>The data is still there, it&#39;s just hidden. To unfilter – go to data and click clear.  It will clear all filtering.</li>
+</ul>
+<h2>TASK 2:</h2>
+<p>Which country won maximum medals gold medals in boxing in Sydney 2000 Olympics?</p>
 
           </div>
         
           <div class="ui tab segment lab" data-tab="04">
-            <h1>Data linking</h1>
-<p>It is good practice to ensure that the data is loaded correctly after adding tables to your data model. The Table Viewer is the preferred dialog in QlikView if you want to examine how the data is related.</p>
-<p>This dialog is used to display the data table structure of the current QlikView document. Tables are shown as boxes with a list of the fields they contain. Connector lines between the boxes show the associations.  Where more than two lines meet there are connector points in the form of small dots.</p>
+            <h1>Pivot tables</h1>
+<p>A pivot table is a program tool that allows you to reorganize and summarize selected columns and rows of data in a spreadsheet or database table to obtain a desired report. A pivot table doesn&#39;t actually change the spreadsheet or database itself. It’s a very powerful data summarisation tool.  It’s a form of reports and online analytical processing (OLAP).</p>
+<p>Be aware they are dynamic, so each time the data changes in you data file, the summary gets updated.
+Using the same file, Olympics data. We will use Pivot tables to get some useful summaries from the data.
+Answer the following question: “I wish to find out how many medals were won in bronze, silver, gold medals in each of these countries across all years?”</p>
+<p>•    Insert the Pivot Table (Insert menu)
+•    Make sure all data selected.
+•    Choose new worksheet
+•    The Pivot table is placed on the worksheet.  You can see the fields on your right.<br>•    You can drag fields to the boxes columns, rows underneath the field list. 
+•    Follow this...</p>
+<p><img src="./img/10.png" alt=""></p>
 <ul>
-<li>Open the Table Viewer dialog by selecting Table Viewer from the File menu or pressing Ctrl+T.</li>
-<li>Ensure that all tables are connected by key fields.</li>
+<li>In this example, Canada has won a total of 304 medals over this period of time, broken up into bronze, gold, silver as per the numbers given.</li>
+<li>One thing to keep in mind is that if there is a team sport, and that team sport consists of, let&#39;s say, 11 members, 10 members and so on, and if a country won the medal in that team sport, then all the individual members of the team are listed as medal winners in this file.</li>
 </ul>
-<p><img src="./img/16.png" alt=""></p>
+<h2>Sort</h2>
 <ul>
-<li>Click ok to close table viewer</li>
+<li>You can sort the column labels by clicking outside of pivot table which disables the right hand side pivot table options.</li>
 </ul>
-<h2>Load Excel file</h2>
+<p><img src="./img/11.png" alt="">
+-    Choose a reverse sorting option
+-    You can change order also by manually selecting a column, e.g. silver, drop the column on top of one of the other to show a different sequence:</p>
+<p><img src="./img/12.png" alt=""></p>
+<h3>TASK 3:</h3>
 <ul>
-<li>Open the Edit Script dialog (Ctrl+E)</li>
-<li>Place the cursor on an empty row below the load script for the qvd files.</li>
-<li>Under the Data From Files, click the Table Files button.</li>
-<li>From the Open Local Files dialog navigate to the SalesPersons_Offices.xls file that you saved earlier. Click Open.
-<img src="./img/17.png" alt=""></li>
-<li>In the File Wizard dialog under tables, ensure that Employee$ is selected.</li>
-<li>From the Labels field, select Embedded Labels</li>
-<li>Click Finish.</li>
-<li>Name the table in the load script, replace Directory; with SalesPersons:</li>
-<li>Click Reload</li>
-<li>The Sheet Properties dialog displays a list of the loaded fields. Click ok.</li>
-<li>Open the Table Viewer (Ctrl+T)</li>
+<li>What if we only want the middle tally for the Sydney Olympics in year 2000?</li>
+<li>We can do that by using the report filter option on the right hand side.</li>
+<li>We wish to filter this pivot table using that year, so select the year variable.  Drag it and place it in the report filter area.</li>
 </ul>
-<p><img src="./img/18.png" alt=""></p>
-<p>Why is the SalesPersons table not connected to the Facts table?</p>
-<h2>Connecting tables</h2>
-<p>You need to connect the SalesPerson table to the Facts table. Therefore we need to have a common field name. We must rename the Employees_ID field to be called %Key_Employees</p>
+<p><img src="./img/13.png" alt=""></p>
+<h3>TASK 4:</h3>
 <ul>
-<li>Open the Edit Script</li>
-<li>Locate the script lines for loading the Facts table.</li>
-<li>Select %Key_Employees and copy it.</li>
-<li>Locate the script lines for loading the SalesPersons table, place your cursor between Employees_ID and the comma</li>
-<li>Type &quot;as&quot; and then paste the name %Key_Employees, your script should look as follows:</li>
+<li>Do a Sydney Olympics medal tally only for the sport of boxing:</li>
 </ul>
-<p><img src="./img/19.png" alt=""></p>
+<p><img src="./img/14.png" alt=""></p>
 <ul>
-<li>Click Reload, close the sheet property dialog and open table viewer to make sure the connection has occured.</li>
+<li>What if we want the medal tally broken up across all the sports?</li>
+<li>Show the medals for each sport in each country in 2000 Sydney Olympics?</li>
 </ul>
-<p><img src="./img/20.png" alt=""></p>
-<h2>Load Master Calendar script</h2>
-<ul>
-<li>Edit the script</li>
-<li>Place cursor on a blank line from the Insert menu choose Include Statement.</li>
-<li>Locate the MasterCalendar.txt file you saved earlier. Click open, click reload and ok to close the sheet properties dialog.</li>
-<li>Open table viewer to ensure that the MasterCalendar table is properly linked to the Facts table.</li>
-</ul>
-<p>You can now clearly see the central fact table and the four dimensions that surround it, customers, calendar, products and sales persons.</p>
-<p><img src="./img/21.png" alt=""></p>
-<p>Save your work.</p>
 
           </div>
         
